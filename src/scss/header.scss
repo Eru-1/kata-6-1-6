@@ -1,0 +1,148 @@
+/* ОБЕРТКА САЙТА*/
+
+.section {
+  &__all-content {
+    min-width: 320px;
+  }
+}
+
+/* ШАПКА САЙТА */
+
+.header {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid;
+  border-color: #d9fff5;
+  border-bottom-width: 1px;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.header__btn {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #ff3e79;
+  background-position: center;
+}
+
+.header__btn--burger {
+  background-image: url(./img/burger.svg);
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.header__btn--repair {
+  background-image: url(./img/repair.svg);
+  background-repeat: no-repeat;
+  margin-right: 16px;
+  padding: 0;
+}
+
+.header__btn--search {
+  background-image: url(./img/search.svg);
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.header__btn--phone {
+  background-image: url(./img/phone.svg);
+  background-repeat: no-repeat;
+}
+
+.header__btn--mail {
+  background-image: url(./img/mail.svg);
+  background-repeat: no-repeat;
+}
+
+.header__btn--body {
+  background-image: url(./img/body.svg);
+  background-repeat: no-repeat;
+}
+
+.header__leftZone {
+  display: flex;
+  align-items: center;
+  margin-left: 16px;
+}
+
+.header__middleZone {
+  display: none;
+}
+
+.header__rightZone {
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.header__rightZone::before {
+  content: url(./img/divider.svg);
+  margin-right: 24px;
+  height: 32px;
+}
+
+.header__logo {
+  width: 96.548px;
+  height: 50.815px;
+  flex-shrink: 0;
+  border: none;
+  background-color: white;
+  padding: 0;
+  margin-left: 16px;
+}
+
+.header__logo--img {
+  background-image: url(./img/logo.svg);
+  background-repeat: no-repeat;
+  width: 96.548px;
+  height: 50.815px;
+}
+
+@media (min-width: 767px) and (max-width: 1119px) {
+  .header {
+    padding: 0 8px;
+  }
+
+  .header__MR {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__middleZone {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .header__rightZone {
+    margin-right: 25px;
+  }
+
+  .header__btn--mail {
+    margin-left: 16px;
+  }
+
+  .header__btn--body {
+    margin-left: 16px;
+  }
+
+  .header__logo {
+    margin-left: 42px;
+  }
+
+  .header__btn--burger::after {
+    content: url(./img/divider.svg);
+    margin-left: 60px;
+    height: 32px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .header {
+    display: none;
+  }
+}

@@ -1,0 +1,286 @@
+/* БЛОК САЙДБАР МЕНЮ */
+// ОБЩЕЕ
+.sidebar-menu {
+  z-index: 2;
+  width: 320px;
+  position: fixed;
+  background-color: $color-white;
+  box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2), -2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+  overflow-y: auto;
+  left: -150%;
+  transition: left 500ms ease-in-out;
+
+  &--open {
+    height: 100%;
+    left: 0;
+  }
+
+  &--close {
+    background-image: url("./img/burgerActive.svg");
+  }
+
+  @media (min-width: 360px) {
+    min-width: 360px;
+  }
+
+  @media (min-width: 768px) {
+    min-width: 320px;
+    width: 320px;
+  }
+
+  @media (min-width: 1366px) {
+    display: block;
+    position: static;
+    box-shadow: none;
+    z-index: 1;
+  }
+
+  /* ШАПКА */
+  &__header {
+    padding: 18.73px 16px 0 16px;
+
+    @media (min-width: 360px) {
+      padding: 18.73px 24px 0 24px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 18.73px 24px 0 24px;
+    }
+
+    @media (min-width: 1366px) {
+      padding-top: 34px;
+    }
+  }
+
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-container-part1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  &__header-container-part2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__logo {
+    background-image: url(./img/logo.svg);
+    background-repeat: no-repeat;
+    width: 96.548px;
+    height: 50.815px;
+  }
+
+  &__header-button {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #ff3e79;
+    background-position: center;
+    /* margin-top: 5.73px; */
+    background-image: url("./img/glass.svg");
+    background-repeat: no-repeat;
+
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  .button-menu--close {
+    background-image: url("./img/burgerActive.svg");
+    background-repeat: no-repeat;
+    margin-top: 7px;
+  }
+
+  /* НАВИГАЦИЯ */
+  &__navigation {
+    margin: 26px 0 24px 0;
+    padding: 0 16px 0 16px;
+
+    @media (min-width: 360px) {
+      margin-top: 24px;
+      padding: 0 24px 0 24px;
+    }
+
+    @media (min-width: 768px) {
+      margin: 50.27px 0 268px 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: -16px;
+    gap: 10px;
+
+    @media (min-width: 360px) {
+      margin-left: -24px;
+    }
+  }
+
+  &__item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    @media (min-width: 768px) {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
+
+    &:focus,
+    &:hover {
+      content: "";
+      width: 4px;
+      background-color: $color-main-turquoise;
+      border-radius: 0px 10px 10px 0px;
+      white-space: nowrap;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  &__link {
+    color: $text-color-main-black;
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.2px;
+    cursor: pointer;
+    padding: 0 0 0 16px;
+
+    @media (min-width: 360px) {
+      padding: 0 0 0 24px;
+    }
+
+    &:focus,
+    &:hover {
+      color: $text-color-main-grey;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+  /* ПОДВАЛ */
+  &__footer {
+    padding: 0 16px 32px 16px;
+
+    @media (min-width: 360px) {
+      padding: 0 24px 32px 24px;
+    }
+  }
+
+  &__footer-button {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #ff3e79;
+    background-position: center;
+    background-image: url("./img/body.svg");
+    background-repeat: no-repeat;
+
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+  }
+}
+
+.sidebar-modal-call__button--open {
+  background-image: url("./img/phone.svg");
+}
+
+.sidebar-modal-feedback__button--open {
+  background-image: url("./img/mail.svg");
+}
+
+  &__footer-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  &__footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 12px;
+    margin: 16px 0 8px 0;
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__number {
+    font-family: TT Lakes;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  &__mail {
+    cursor: pointer;
+  }
+
+  &__footer-button {
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  &__footer-lengBtn {
+    color: #1b1c21;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    border: none;
+    background-color: white;
+    padding: 0;
+  }
+  
+  &__footer-lengBtn:hover {
+    color: #7e7e82;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: -0.2px;
+    transition: 0.3s;
+  }
+}
+
+/* ПОЯВЛЕНИЕ САЙДБАР МЕНЮ ПОСЛЕ НАЖАТИЯ НА КНОПКУ МЕНЮ */
+.button-menu--open {
+  height: 100%;
+  left: 0;
+}
+
+/* ПОЯВЛЕНИЕ САЙДБАР МЕНЮ ПОСЛЕ 1440 ПХ+ */
+.button-menu--close {
+  @media (min-width: 1366px) {
+    display: none;
+  }
+}
+
